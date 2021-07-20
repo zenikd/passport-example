@@ -1,42 +1,22 @@
 # Passport-Tutorial
 
-Node.js authentication tutorial using Passport.js
+Run npm start 
 
-### Prerequisites
+Call POST: http://localhost:8000/api/users/login
 
-Make sure you have these installed on your machine
+with body 
 
-* [Node.js](https://nodejs.org/en/download/)
-* [MongoDB](https://www.mongodb.com)
-* **npm** This comes with Node.js, but make sure you check if you have it anyway
-
-### Installing packages
-
-Install packages
-
-```
-npm i
+```javascript
+{
+    "user": {
+        "email": "zen",
+        "password": "password"
+    }
+   
+}
 ```
 
-### Running the app
+Extract jwt token from response cookies and add them to Postman cookie
 
-To run the app (dev. mode)
-
-```
-npm start
-```
-
-## Built With
-
-* [Node.js](https://nodejs.org) - The backend framework used
-* [Express.js](https://github.com/expressjs/express) - Node.js framework used
-* [MongoDB](https://www.mongodb.com/) - Database platform used
-
-
-## Authors
-
-* **Antonio Erdeljac** - *Initial work* - [Passport-Tutorial](https://github.com/AntonioErdeljac/Blog-Tutorial)
-
-## Acknowledgments
-
-* This was a tutorial for my [Medium article](https://medium.com/p/4a56ed18e81e)
+call GET http://localhost:8000/api/users/hello
+you should get Hello as response
